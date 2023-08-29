@@ -146,6 +146,7 @@ loopCopy:
     loop loopCopy
 
     call pause
+    call MEMBERMENU
     ret
 
 memberloginFail:

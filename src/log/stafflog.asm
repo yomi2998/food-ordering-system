@@ -146,6 +146,7 @@ loopCopy2:
     loop loopCopy2
 
     call pause
+    call STAFFMENU
     ret
 
 staffloginFail2:
