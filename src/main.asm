@@ -14,10 +14,10 @@
     staffreg db "Staff Registration", 10, "$"
     stafflog db "Staff Login", 10, "$"
     usernamePrompt db "Enter your username (maximum 8 characters, minimum 2 characters, -1 to cancel): $"
-    usernameLoginPrompt db "Enter your username: $"
+    usernameLoginPrompt db "Enter your username (-1 to cancel): $"
     username db 30 dup("$")
     passwordPrompt db "Enter your password (maximum 16 characters, minimum 8 characters, -1 to cancel): $"
-    passwordLoginPrompt db "Enter your password: $"
+    passwordLoginPrompt db "Enter your password (-1 to cancel): $"
     password db 30 dup("$")
     passwordBuffer db 30 dup("$")
 
@@ -82,7 +82,7 @@ loginsession:
 
 mbrlogin:
     call MEMBERLOGIN
-    jmp stflogin
+    jmp loginsession
 stflogin:
     call STAFFLOGIN
     jmp loginsession

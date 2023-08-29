@@ -33,11 +33,11 @@ mbrproceedPasswordPrompt:
 
     call newline
 
-    CMP username + 2, '-'
+    CMP password + 2, '-'
     jne mbrproceedCheckAccount
-    CMP username + 3, '1'
+    CMP password + 3, '1'
     jne mbrproceedCheckAccount
-    CMP username + 1, 2
+    CMP password + 1, 2
     jne mbrproceedCheckAccount
     ret
     
